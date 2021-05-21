@@ -8,6 +8,11 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-	// Custom JS
+	const swiperGal = new Swiper('.swiper-container', {
+		zoom: true,
+		slidesPerView: 6,
+		slidesPerColumn: 2,
+		spaceBetween: 30
+	  });
+});
 
-})

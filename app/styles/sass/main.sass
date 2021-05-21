@@ -2,52 +2,167 @@
 @import 'blocks/**/*'
 
 header
-    background: #F8F8F8
+    background: left no-repeat url('../images/dist/back.svg')
+    position: relative
+    .blue-back
+        position: absolute
+        top: 0
+        right: 0
+        z-index: -1
+        width: 350px
+        height: 100%
+        background-color: #005792
 
 .head
     display: flex
-    .header-left
-        width: 70%
-        .menu
+    flex-direction: column
+    .menu
+        display: flex
+        justify-content: space-between
+        padding: 10px 0
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            height: 1px
+            width: 90%
+            z-index: -2
+            background: #2F2A25
+            opacity: 0.12
+            bottom: 0
+            right: 0
+        &-logo
+            width: 69px
+            height: 69px
+            background: #F8F8F8
+            border-radius: 50%
+            line-height: 69px
             display: flex
-            justify-content: space-around
-            &::after
+            justify-content: center
+            img
+                display: block
+                margin: auto
+                alignment-baseline: center
+        &-list
+            font-weight: 700
+            align-self: center
+            ul
+                display: flex
+                list-style: none
+                margin: 0
+                padding: 0
+                li
+                    margin: auto 20px
+        &-phone
+            align-self: center
+            .phone
+                font-size: 1.1em
+                font-weight: 700
+            img
+                margin-right: 10px
+            .adress
+                font-size: 0.8em
+                margin-left: 37px
+        &-social
+            display: flex
+            justify-content: center
+            align-self: center
+            &-item
+                width: 20px
+                height: 20px
+                margin: 0 10px
+                img
+                    width: 20px
+                    height: 20px
+                    &:hover
+                        width: 25px
+                        height: 25px
+                        transition: 0.3s ease
+    .main
+        display: flex
+        justify-content: space-around
+        align-items: center
+        margin: 50px auto
+        &-desc
+            width: 30%
+            &-title
+                font-family: 'Day'
+                font-size: 4.1em
+                font-weight: bold
+                line-height: 68px
+            &-p
+                padding-left: 15px
+                margin: 30px 0
+                position: relative
+                width: 70%
+                font-size: 0.9em
+                font-weight: bold
+                color: $accent
+                &::before
+                    content: ''
+                    width: 1px
+                    height: 100%
+                    position: absolute
+                    left: 0
+                    background-color: #DD0A35
+            .button 
+                img
+                    margin-left: 15px
+        &-img
+            align-self: center
+            img
+                text-align: center
+                filter: drop-shadow(0px 179px 250px rgba(0, 0, 0, 0.21))
+.about
+    display: flex
+    justify-content: space-around
+    height: 500px
+    &-desc
+        width: 23%
+        align-self: center
+        padding-right: 20px
+        z-index: 10
+        background-color: white
+        span
+            color: $accent
+            font-family: Day
+            font-size: 1.2em
+            text-transform: uppercase
+        h2
+            font-size: 4.1em
+        h3
+            font-size: 2em
+            line-height: 1.3em
+            position: relative
+            padding-bottom: 20px
+            &:after
                 content: ''
                 position: absolute
-                height: 1px
-                width: 90%
-                background: #2F2A25
-                opacity: 0.12
                 bottom: 0
-                right: 0
-            .menu-logo
-                width: 69px
-                height: 69px
-                background: #FFFFFF
-                border-radius: 50%
-                line-height: 69px
-                display: flex
-                justify-content: center
-                img
-                    display: block
-                    margin: auto
-                    alignment-baseline: center
-            .menu-list
-                ul
-                    display: flex
-                    list-style: none
-                    margin: 0
-                    padding: 0
-                    li
-                        margin: 20px
-            .menu-phone
-                align-self: center
-    .header-right
-        width: 30%
-        display: flex
-        justify-content: center
-        align-items: center
-        background: #005792
-        .header-social
-            margin: auto 17px 
-
+                left: 0
+                height: 1px
+                background-color: $accent
+                width: 20%
+        p
+            color: #AFAFAF;
+            line-height: 1.4em
+        a
+            font-weight: bold
+            font-size: 0.8em
+            text-transform: uppercase
+            display: inline-block
+            img
+                display: inline0-block
+                margin-left: 10px
+    .swiper-container
+        width: 77%
+        height: 80%
+        align-self: center
+        margin-left: auto
+        margin-right: auto
+        .swiper-slide
+            text-align: center
+            height: calc((100% - 30px) / 2)
+            display: flex
+            justify-content: center
+            align-items: center

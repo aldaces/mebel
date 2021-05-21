@@ -1,10 +1,10 @@
 // USER VARIABLES SECTION
 
-$accent: orange // Accent Color
+$accent: #b01f29 // Accent Color
 $fontsize: 16px // Body Font Size
 $textcolor: #333 // Text Color
 $lineheight: 1.65 // Document Line Height
-$userfont: roboto-oh5, sans-serif // User Font Family
+$userfont: Monst, sans-serif // User Font Family
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
 
 // Bootstrap compatible gutter variable => $gutter
@@ -27,10 +27,10 @@ $gutter: $grid-gutter-width
 		font-weight: $fweight
 		src: url($furl) format('woff2')
 
-@include font('roboto-oh5', normal, 400, '../fonts/roboto-regular-webfont.woff2')
-@include font('roboto-oh5', italic, 400, '../fonts/roboto-italic-webfont.woff2')
-@include font('roboto-oh5', normal, 700, '../fonts/roboto-bold-webfont.woff2')
-@include font('roboto-oh5', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+@include font('Day', normal, 400, '../fonts/DaysOne-Regular.woff2')
+@include font('Monst', normal, 300, '../fonts/Montserrat-Light.woff2')
+@include font('Monst', normal, 400, '../fonts/Montserrat-Regular.woff2')
+@include font('Monst', normal, 700, '../fonts/Montserrat-Bold.woff2')
 
 // GENERAL DOCUMENT STYLES
 
@@ -56,3 +56,27 @@ body
 	min-width: 320px
 	position: relative
 	overflow-x: hidden
+	box-sizing: border-box
+.container
+	max-width: 1620px
+	margin: 0 auto
+button
+	font-family: $userfont
+	font-weight: bold
+	text-align: center
+	width: 179px
+	height: 51px
+	background: $accent
+	color: white
+	border: 0
+	&:hover
+		background: #d72a36
+		transition: 0.5s ease
+a
+	color: #000
+	&:hover
+		color: $accent
+		text-decoration: none
+		transition: 0.3s ease
+h2,h3
+	font-family: Day
