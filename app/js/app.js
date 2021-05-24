@@ -14,5 +14,17 @@ document.addEventListener('DOMContentLoaded', () => {
 		slidesPerColumn: 2,
 		spaceBetween: 30
 	  });
+
+
+	var iso = new Isotope( '.gallery', {
+	itemSelector: '.stone-product-list',
+	getSortData: {
+		name: '.name',
+		category: '[data-category]'
+	},
+	masonry: {
+		columnWidth: 200
+	}
+	});
 });
 

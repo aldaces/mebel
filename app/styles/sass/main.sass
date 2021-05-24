@@ -166,3 +166,60 @@ header
             display: flex
             justify-content: center
             align-items: center
+.banners
+    display: flex
+    justify-content: space-evenly
+    margin: 100px auto
+    &-item
+        width: 49%
+        height: 460px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        color: white
+        outline: 2px solid white
+        outline-offset: -2em
+        &-span
+            font-size: 0.9em
+            text-transform: uppercase
+        &-title
+            font-size: 2.1em
+    .banner-1
+        background: url('../images/dist/banner-1.svg') no-repeat
+    .banner-2
+        background: url('../images/dist/banner-2.svg') no-repeat
+.back-video
+    background: url('../images/dist/back-video.svg') no-repeat
+.video
+    display: flex
+    align-items: center
+    position: relative
+    height: 610px
+    margin-bottom: 100px
+    &-desc
+        color: white
+        width: 40%
+        &-title
+            font-size: 3em
+        &-p
+            font-size: 1.2em
+            color: #EAEAEA
+        &-a
+            font-size: 1.2em
+            display: inline-block
+            color: white
+            img
+                display: inline-block
+                margin-left: 10px
+    &-tag
+        position: absolute
+        bottom: -50px
+        right: 5%
+        filter: drop-shadow(0px 31px 133px rgba(0, 0, 0, 0.13))
+.gallery
+    height: 400px
+.back-why
+    background: url('../images/dist/back-why.svg') no-repeat right  #F8F8F8
+.why
+    height: 482px
