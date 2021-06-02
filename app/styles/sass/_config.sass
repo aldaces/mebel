@@ -5,6 +5,7 @@ $fontsize: 16px // Body Font Size
 $textcolor: #333 // Text Color
 $lineheight: 1.65 // Document Line Height
 $userfont: Monst, sans-serif // User Font Family
+$dayfont: Day, sans-serif
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
 
 // Bootstrap compatible gutter variable => $gutter
@@ -40,7 +41,8 @@ $gutter: $grid-gutter-width
 ::selection
 	background-color: $accent
 	color: #fff
-
+html
+	overflow-x: hidden
 input, textarea
 	outline: none
 	&:focus:required:invalid
@@ -60,6 +62,7 @@ body
 .container
 	max-width: 1620px
 	margin: 0 auto
+	padding: 0 50px
 button
 	font-family: $userfont
 	font-weight: bold
@@ -79,4 +82,4 @@ a
 		text-decoration: none
 		transition: 0.3s ease
 h2,h3
-	font-family: Day
+	font-family: $dayfont

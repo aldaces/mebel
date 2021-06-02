@@ -1,4 +1,4 @@
-// // Import jQuery module (npm i jquery)
+// Import jQuery module (npm i jquery)
 // import $ from 'jquery'
 // window.jQuery = $
 // window.$ = $
@@ -12,13 +12,52 @@ document.addEventListener('DOMContentLoaded', () => {
 		zoom: true,
 		slidesPerView: 6,
 		slidesPerColumn: 2,
-		spaceBetween: 30
+		spaceBetween: 30,
+		autoplay: {
+			delay: 3000,
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				slidesPerColumn: 1,
+				spaceBetween: 5
+			},
+			425: {
+				slidesPerView: 2,
+				slidesPerColumn: 2,
+				spaceBetween: 15
+			},
+			630: {
+				slidesPerView: 3,
+				slidesPerColumn: 2,
+				spaceBetween: 15
+			},
+			768: {
+				slidesPerView: 3,
+				slidesPerColumn: 2,
+				spaceBetween: 20
+			},
+			992: {
+				slidesPerView: 4,
+				slidesPerColumn: 2,
+				spaceBetween: 20
+			},
+			1024: {
+				slidesPerView: 3,
+				slidesPerColumn: 2,
+				spaceBetween: 20
+			},
+			1280: {
+				slidesPerView: 4,
+				slidesPerColumn: 2
+			}
+		}
 	});
 });
 
 document.addEventListener('DOMContentLoaded', () => {
 	// init Isotope
-	var iso = new Isotope('.grid', {
+	let iso = new Isotope('.grid', {
 		itemSelector: '.element-item',
 		masonry: {
 			columnWidth: 20,
@@ -27,10 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	// filter functions
-	var filterFns = {
+	let filterFns = {
 		// show if number is greater than 50
 		numberGreaterThan50: function (itemElem) {
-			var number = itemElem.querySelector('.number').textContent;
+			let number = itemElem.querySelector('.number').textContent;
 			return parseInt(number, 10) > 50;
 		},
 		// show if name ends with -ium
@@ -41,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	};
 
 	// bind filter button click
-	var filtersElem = document.querySelector('.filters-button-group');
+	let filtersElem = document.querySelector('.filters-button-group');
 	filtersElem.addEventListener('click', function (event) {
 		// only work with buttons
 		if (!matchesSelector(event.target, 'button')) {
@@ -56,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	// change is-checked class on buttons
-	var buttonGroups = document.querySelectorAll('.button-group');
+	let buttonGroups = document.querySelectorAll('.button-group');
 	for (var i = 0, len = buttonGroups.length; i < len; i++) {
 		var buttonGroup = buttonGroups[i];
 		radioButtonGroup(buttonGroup);
