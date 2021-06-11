@@ -1,5 +1,5 @@
 // Import jQuery module (npm i jquery)
-// import $ from 'jquery'
+import $ from 'jquery'
 // window.jQuery = $
 // window.$ = $
 
@@ -115,5 +115,9 @@ document.addEventListener('DOMContentLoaded', () => {
 			event.target.classList.add('is-checked');
 		});
 	}
+});
 
+$('.modal-toggle').on('click', function(e) {
+	e.preventDefault();
+	$('.modal').toggleClass('is-visible');
 });
